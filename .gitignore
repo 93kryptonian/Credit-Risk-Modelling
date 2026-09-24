@@ -1,0 +1,57 @@
+# --- Personal interview-prep docs: never committed ---
+# These are private job-interview strategy notes, not portfolio content.
+/penjelasan.md
+/project_defends.md
+/interview_preparation.md
+/user_interview_prep.md
+/manager_interview_prep.md
+
+# --- Secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Competition data (download separately, see README) ---
+/home-credit-default-risk/
+*.csv
+!sample_submission_example.csv
+
+# --- Generated pipeline artifacts (regenerate via credit_risk_model.py) ---
+/artifacts/
+*.parquet
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.Python
+build/
+dist/
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Test / coverage ---
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# --- Editor / OS cruft ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Local tool state (not project config) ---
+.claude/
+.qodo/

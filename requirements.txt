@@ -1,0 +1,25 @@
+# pandas/numpy are pinned exactly: this is the environment the committed
+# notebook output (Home_Credit_Credit_Risk_Model.ipynb) was actually run
+# against, confirmed by its own printed version banner. pandas has a
+# documented compatibility note in src/data.py (see downcast_frame
+# docstring) that this codebase already accounts for on newer pandas too.
+pandas==2.2.2
+numpy==1.26.4
+
+# Lower-bounded rather than exact-pinned: sensible recent versions, not
+# independently re-verified against the exact run that produced the
+# committed results.
+scikit-learn>=1.4
+xgboost>=2.0
+scipy>=1.10
+
+# Optional but exercised by the pipeline (SHAP explainability, GenAI reason
+# codes, .env loading, cached feature matrix).
+shap>=0.45
+openai>=1.40
+python-dotenv>=1.0
+pyarrow>=13.0
+
+# Notebook-only (plots in Home_Credit_Credit_Risk_Model.ipynb).
+matplotlib>=3.5
+jupyter>=1.0

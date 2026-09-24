@@ -1,0 +1,18 @@
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+# E/F only: correctness-adjacent checks (unused imports/names, undefined
+# names, syntax-level issues). Import-sort (I) and most stylistic W checks
+# are intentionally left off -- the existing import order in src/ predates
+# this config and reordering it is pure churn with no behavior change.
+select = ["E", "F"]
+
+[tool.ruff.lint.per-file-ignores]
+# credit_risk_model.py re-exports names explicitly (rather than via
+# wildcard import) so that `import credit_risk_model as crm` keeps giving
+# the notebook access to the full pipeline API -- see the module docstring
+# and the comment above the import block. Every name below is unused
+# *within this file* by design; that's the point of a re-export.
+"credit_risk_model.py" = ["F401"]
